@@ -23,12 +23,12 @@
         <div class="col-sm-3 colonneLaterali"></div>
         <section class="col-sm-6 mainSection">
             <br>
-            <h1>MODULO DI LOGIN</h1>
+            <h1 class="titoloLogin typingTesto">MODULO DI LOGIN</h1>
             <br>
             <form action="" method="POST">
                 <input type="text" name="username" placeholder="Il tuo nome">
                 <input type="password" name="password" placeholder="La tua password">
-                <button type="submit">Invia</button>
+                <button type="submit" class="stileButton">Invia</button>
             </form>
             <br>
             <?php

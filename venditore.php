@@ -19,7 +19,7 @@
     <main class="row w-100">
         <div class="col-sm-2 colonneLaterali"></div>
         <section class="col-sm-8 mainSectionVenditore">
-            <h1>Benvenuto <?php echo $nomeVenditore; ?>!</h1>
+            <h1 class="titoloVenditore typingTesto">Benvenuto <?php echo $nomeVenditore; ?>!</h1>
             <h1>Complimenti sei ora un venditore!</h1>
             <div class="separatore"></div>
             <div class="aggiuntaProdotti">
@@ -28,7 +28,7 @@
                     <input type="text" name="nomeProdotto" placeholder="Il nome del prodotto">
                     <input type="text" name="prezzo" placeholder="Il prezzo">
                     <input type="text" name="quantita" placeholder="La quantita">
-                    <button type="submit">Invia</button>
+                    <button type="submit" class="stileButton">Invia</button>
                 </form>
                 <br>
                 <?php
@@ -63,7 +63,7 @@
             <div class="visualProdotti">
                 <h1>Visualizza i tuoi prodotti</h1>
                 <form action="" method="GET">
-                    <button type="submit">Visualizza i prodotti</button>
+                    <button type="submit" class="stileButton" style="width: 110%; text-align: center;">Visualizza i prodotti</button>
                 </form>
                 <?php
                     if ($_SERVER["REQUEST_METHOD"] === "GET") 

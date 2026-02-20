@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
     session_start();
+    $nomeAmministratore = cercaUtente($_SESSION["idUtente"]);
 ?>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
     <main class="row w-100">
         <div class="col-sm-2 colonneLaterali"></div>
         <section class="col-sm-8 mainSection">
-            <h1>Ti sei loggato complimenti!!!</h1>
+            <h1 class="titoloAmministratore typingTesto">Benvenuto <?php echo $nomeAmministratore; ?>!</h1>
             <h1>Complimenti sei ora un amministratore!</h1>
         </section>
         <div class="col-sm-2 colonneLaterali"></div>

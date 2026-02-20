@@ -19,7 +19,7 @@
         <div class="col-sm-3 colonneLaterali"></div>
         <section class="col-sm-6 mainSection">
             <br>
-            <h1>MODULO DI REGISTRO</h1>
+            <h1 class="titoloSignup typingTesto">MODULO DI REGISTRO</h1>
             <br>
             <form action="" method="POST">
                 <input type="text" name="username" placeholder="Il tuo nome">
@@ -31,7 +31,7 @@
                     <option value="2">Venditore</option>
                     <option value="3">Acquirente</option>
                 </select>
-                <button type="submit">Invia</button>
+                <button type="submit" class="stileButton">Invia</button>
             </form>
             <?php
                 if($_SERVER["REQUEST_METHOD"] == "POST")

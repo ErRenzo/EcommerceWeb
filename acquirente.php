@@ -2,7 +2,7 @@
 <?php
     session_start();
     require_once "database.php";
-    $nomeVenditore = cercaUtente($_SESSION["idUtente"]);
+    $nomeAcquirente = cercaUtente($_SESSION["idUtente"]);
     $message = "";
     $prodotti = [];
     if(isset($_GET["azione"]))
@@ -42,14 +42,14 @@
     <main class="row w-100">
         <div class="col-sm-2 colonneLaterali"></div>
         <section class="col-sm-8 mainSectionAcquirente">
-            <h1>Benvenuto <?php echo $nomeVenditore; ?>!</h1>
+            <h1 class="titoloAcquirente typingTesto">Benvenuto <?php echo $nomeAcquirente; ?>!</h1>
             <h1>Complimenti sei ora un acquirente!</h1>
             <div class="separatore"></div>
             <div class="visualProdotti">
                 <h1>Visualizza i prodotti acquistabili</h1>
                 <form action="" method="GET">
                     <input type="hidden" name="azione" value="visualizza">
-                    <button type="submit">Visualizza</button>
+                    <button type="submit" class="stileButton">Visualizza</button>
                 </form>
                 <div style="font-size: 30px"> <?php echo $message; ?> </div>
             </div>
@@ -61,7 +61,7 @@
                     <form action="" method="GET">
                         <input type="hidden" name="azione" value="filtra_nomiProdotti">
                         <input type="text" name="nomeProdotto" placeholder="Il nome del prodotto">
-                        <button type="submit">Cerca</button>
+                        <button type="submit" class="stileButton">Cerca</button>
                     </form>
                 </div>
                 <div class='col-sm-4'>
@@ -69,7 +69,7 @@
                     <form action="" method="GET">
                         <input type="hidden" name="azione" value="filtra_venditori">
                         <input type="text" name="nomeVenditore" placeholder="Il nome del venditore">
-                        <button type="submit">Cerca</button>
+                        <button type="submit" class="stileButton">Cerca</button>
                     </form>
                 </div>
                 <div class='col-sm-4'>
@@ -81,7 +81,7 @@
                             <option value="1">Crescente</option>
                             <option value="2">Descrescente</option>
                         </select>
-                        <button type="submit">Ordina</button>
+                        <button type="submit" class="stileButton">Ordina</button>
                     </form>
                 </div>
             </div>
